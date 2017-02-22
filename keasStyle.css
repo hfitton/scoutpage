@@ -1,0 +1,100 @@
+body {  background-color: rgb(230, 238, 255);}
+
+.header h2{  text-align:left;  margin:auto  font-family:Times, Arial;}
+
+.container {  
+	margin:auto;  
+	width: 95%;
+	}
+
+.logo	{  
+	float:left;  
+	width:30%;  
+	}
+
+.title h2 {  
+	float:left;  
+	width:48%;  
+	padding:5px;}
+
+.divider {  
+	width:95%;  
+	text-align:left;  
+	color:white;  
+	font-style:bold;  
+	font-family:Arial, Times;
+  	background:#5C3698;  
+	padding:10px;  
+	clear:both;
+	}
+
+.left {  
+	float:left;  
+	width:48%;  
+	padding:5px;}
+
+.right{  
+	float:left;  
+	width:48%;  
+	padding:5px;
+	}
+
+input[type=text] {
+	width:80%;
+	}
+input[type=int] {
+	width:80%;
+	}
+input[type=email] {
+	width:80%;
+	}
+input[type=date] {
+	width:80;
+	}
+select {
+  	padding:3px;
+  	width:80%
+	} 	
+
+input [type=radio] { width:auto; }
+
+#comment {
+  clear:both;
+  text-align:left;
+}
+
+.center {
+	text-align:center;
+	margin:auto;
+	}
+
+#comment input {  width:95%;}
+
+.questions input[type="text"] {
+	width:70%;
+		}
+
+.button {
+	margin:auto;  
+	display:block;  
+	clear:both;  
+	padding:7px; 
+	margin-bottom:10px;
+    	font-size: 20px;  
+	border-radius:12px;
+	}
+
+#response p {
+	margin:auto;
+	}
+.thanksfooter 	{
+		position:absolute
+  		bottom: 0;
+		width:100%;
+		}
+  
+
+
+
+
+

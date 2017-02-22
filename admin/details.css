@@ -1,0 +1,38 @@
+/* this goes with details.php */
+/* '.' is for an id  # for a class. */  
+body	{
+	font-family:Arial, Verdana, Garamond;
+  }
+
+  .container {  
+  margin:auto;  
+  width:100%}
+
+#left {
+  display: inline-block;
+  float:left;
+  width: 33%;
+}
+#middle {
+  width:33%;
+  float:left;
+}
+#right {
+  width:33%;
+  float:left;
+}
+.button {
+  margin:auto;
+  display:block;
+  padding:7px;
+  font-size: 20px;
+  border-radius:12px;
+  width: 50%;
+}
+table, th, td {
+    border: 1px solid black;
+    /* border-collapse makes one single border around the table. */
+    border-collapse: collapse;
+    padding:2px;
+    margin:3px;
+}

@@ -1,0 +1,80 @@
+/*COLOR FOR KEA TEXTS =  rgb(246, 145, 30)
+keas - #F39700
+cubs - #FDC900
+for scouts: #00683B
+for vennies: #970022
+for rovers: #E71E10
+leaders: #00549D
+color for scout header texts = color:#c1bb31 
+color for purple backgrounds: #5C3698; taken from scouts nz site. OR  #5B3896 from Waikanae Scouts */
+body	{
+	font-family:Arial, Verdana, Garamond;
+	}
+.keaheader { 
+	background-color:#5B3896; 
+	text-align:center;  
+	margin:auto; 
+	font-size:50px; 
+	color:#c1bb31; 
+	font-style:bold; 
+	}
+#keatext {
+	color:#00683B;
+	font-weight:bold; 
+	font-size: 25px;
+	}
+
+.container {  
+	margin:auto;  
+	width:100%}
+.navbar {  
+	float:left;  
+	width:15%;  
+	}
+.navbar ul li a{
+	text-decoration:none;
+	font-family:Arial, Verdana, Garamond;
+//	border-top:1px solid #5C3698;
+	padding-top:4px;
+	}
+
+.navbar ul li:hover { 
+	background-color:#ced1ed; 
+//	list-style-image: url('pictures/worldlogo.png');
+	} 
+li	{
+	list-style-type:none;	
+	line-height:30px;
+	}
+.main	{  
+	float:right; 
+	margin:auto; 
+	width:75%
+	}
+input[type=text] {
+	width:60%;
+	}
+input[type=int] {
+	width:60%;
+	}
+input[type=email] {
+	width:60%;	}
+select {
+  	padding:3px;
+  	width:60%
+	} 
+#comments, textarea	{
+	width:60%;
+	}
+.button {
+	margin:auto;  
+	display:block;  
+	clear:both;  
+	padding:7px; 
+	margin-bottom:10px;
+    	font-size: 20px;  
+	border-radius:12px;
+	}
+	
+
+

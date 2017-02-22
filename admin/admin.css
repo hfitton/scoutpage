@@ -1,0 +1,49 @@
+body	{
+	font-family:Arial, Verdana, Garamond;
+  text-align: center;
+  margin: auto;
+	}
+.intro {
+  margin:auto;
+  width:700px;
+  text-align:center;
+  border-top: 5px solid blue;
+  border-bottom:5px solid blue;
+  border-length:400px;
+}
+#form {
+  margin:auto;
+  width:70%;
+}
+form, input {
+  margin:5px;
+  padding:5px;
+  width:50%
+}
+form {
+  font-family;Times,Ubuntu, URW Chancery L;
+  font-size:20px;
+  text-align: center;
+}
+select {
+  margin:7px;
+  padding:5px;
+  width:50%
+}
+.button {
+  margin:auto;
+  display:block;
+  padding:7px;
+  font-size: 20px;
+  border-radius:12px;
+  width: 50%;
+}
+
+}
+table {
+  border:1px solid black;
+  padding:10px;
+  display: block;
+  height: 700px;
+  overflow-y: scroll
+}
