@@ -8,28 +8,25 @@
   <title>Admin</title>
      </head>
 
+     <div class='keaheader'>
+  <a href="../home.html"><img src="../pictures/waikscoutbanner.png" alt = "Welcome to Waikanae Scout Group"></a><br>
+</div>
+
 	<!--button to take you back to the homepage-->
 
   <div id ="form">
-
+    
 	<form action="../home.html" method='post'>
 		<button class="button" type='submit' name='submit' id='submit' value='submit'>Home</button>
 	</form>
 
    <form action="results.php" method="post" id='searchform'>
 
-      Your name:<input type='text' name='name' label="name" id="name"></label><br>
-    Search for:<input type='text' required='required' name='test' label='test' id="test"></label><br>
+     <!-- Your name:<input type='text' name='name' label="name" id="name"></label><br> -->
+      
+    Search for:<input type='text' required='required' placeholder= 'search here' name='test' label='test' id="test"></label><br>
 
-             <label for='value1'>Search value one:</label><br><select name='value1' id='value1' required></label><br>
-            <option value = "surname">Surname</option>
-            <option value = "firstname">Firstname</option>
-            <option value = "dob">Date of birth</option>
-            <option value = "p1surname">Parent one's surname</option>
-                </select><br>      
-
-
-          
+    
        
         <input type="submit" name='submit' value="Search" />
 
@@ -48,6 +45,14 @@
 
 
 
+<!--
+             <label for='value1'>Search value one:</label><br><select name='value1' id='value1' required></label><br>
+            <option value = "surname">Surname</option>
+            <option value = "firstname">Firstname</option>
+            <option value = "dob">Date of birth</option>
+            <option value = "p1surname">Parent one's surname</option>
+                </select><br>      
+-->
 
 <!--building the form--> <!--action="search.php?go"
 	     <form action="results.php" method='post'>

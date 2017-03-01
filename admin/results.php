@@ -1,4 +1,15 @@
-<!--broke the php to insert the html div results for formatting in css-->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>results</title>
+  </head>
+  <body>
+  <link rel="stylesheet" href="results.css">
+  	<!--broke the php to insert the html div results for formatting in css-->
+  <div class='keaheader'>
+  <a href="../home.html"><img src="../pictures/waikscoutbanner.png" alt = "Welcome to Waikanae Scout Group"></a><br>
+</div>
+
   <div class = 'results'>
   <?php 
 
@@ -10,8 +21,10 @@
 
 //echo "<h4>Welcome to this page, ".$_POST['test']. " .</h4>";
 
+
+
  $data = $_POST['test']; 
- $value = $_POST['value1'];
+ //$value = $_POST['value1'];
     // gets value sent over search form
 
   ?>
@@ -56,7 +69,10 @@ echo "</ul>\n";
 
 ?>
     </div>
-<form action="admin.php" method='post'>
+    <form action="admin.php" method='post'>
 		<button class="button" type='submit' name='submit' id='submit' value='submit'>Back to search</button>
+	</form>
+	<form action="../home.html" method='post'>
+		<button class="button" type='submit' name='submit' id='submit' value='submit'>Home</button>
 	</form>
 </div>

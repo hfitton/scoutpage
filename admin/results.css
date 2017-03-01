@@ -1,0 +1,40 @@
+body	{
+	font-family:Arial, Verdana, Garamond;
+  text-align: center;
+  margin: auto;
+	}
+
+  .keaheader { 
+  background-color:#5B3896; 
+  text-align:center;  
+  margin:auto; 
+  font-size:50px; 
+  color:#c1bb31; 
+  font-style:bold; 
+  }
+
+.button {
+  margin:auto;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  display:block;
+  padding:7px;
+  font-size: 20px;
+  border-radius:12px;
+  width: 20%; 
+}
+a {
+   text-decoration:none;
+}
+table {
+  border:1px solid black;
+  padding:15px;
+  display: block;
+  height: 700px;
+  overflow-y: scroll
+}
+
+li, ul{
+  list-style-type: none;
+}
+

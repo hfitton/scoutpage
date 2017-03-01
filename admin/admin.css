@@ -1,27 +1,38 @@
+/* color for purple: #593697 / 	HTML code:	#5B3896
+RGB code:	R: 91 G: 56 B: 150 */
+
 body	{
 	font-family:Arial, Verdana, Garamond;
   text-align: center;
   margin: auto;
 	}
-.intro {
-  margin:auto;
-  width:700px;
-  text-align:center;
-  border-top: 5px solid blue;
-  border-bottom:5px solid blue;
-  border-length:400px;
-}
+
+.keaheader { 
+	background-color:#5B3896; 
+	text-align:center;  
+	margin:auto; 
+	font-size:50px; 
+	color:#c1bb31; 
+	font-style:bold; 
+	}
+
+	#id{
+		margin:auto;
+		text-align: center;
+	}
+
 #form {
-  margin:auto;
   width:70%;
-}
+  margin:auto;
+  margin-top: 40px;
+  }
 form, input {
-  margin:5px;
+  margin:auto;
   padding:5px;
   width:50%
 }
 form {
-  font-family;Times,Ubuntu, URW Chancery L;
+  font-family:Arial, Verdana, Garamond;;
   font-size:20px;
   text-align: center;
 }
@@ -37,13 +48,13 @@ select {
   font-size: 20px;
   border-radius:12px;
   width: 50%;
+  
 }
-
-}
-table {
-  border:1px solid black;
-  padding:10px;
-  display: block;
-  height: 700px;
-  overflow-y: scroll
+input {
+	margin:auto;
+  display:block;
+  padding:7px;
+  font-size: 20px;
+  border-radius:12px;
+  width: 50%;
 }

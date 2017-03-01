@@ -50,9 +50,9 @@ table{
     position:relative;
     }
 table, th, td {
-    /*border: 1px solid black;
-    /* border-collapse makes one single border around the table. 
-    border-collapse: collapse;*/
     padding:2px;
     margin:3px;
+}
+input {
+  font-size; 20px;
 }
