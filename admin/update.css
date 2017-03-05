@@ -1,7 +1,8 @@
-/* this goes with details.php */
+/* this goes with update.php */
 /* '#' is for an id  . for a class. */  
-body	{
-	font-family:Arial, Verdana, Garamond;
+
+body  {
+  font-family:Arial, Verdana, Garamond;
   }
 
 .keaheader { 
@@ -11,30 +12,12 @@ body	{
   font-size:50px; 
   color:#c1bb31; 
   font-style:bold; 
-
-#left1 {
-  margin-top: 7px;
-  margin-bottom: 7px;
-  padding:7px;
-  font-size: 20px;
-  border-radius:12px;
-  width: 60%; 
-  text-decoration:none;
-}
-
-.button {
-  margin-top: 7px;
-  margin-bottom: 7px;
-  padding:7px;
-  font-size: 20px;
-  border-radius:12px;
-  width: 60%; 
-  text-decoration:none;
-}
-
+ 
 .container {  
   margin:auto;  
-  width:100%}
+  width:100%
+  border:1px solid black;
+}
 
 #left {
   margin: auto;
@@ -52,16 +35,13 @@ body	{
   width:33%;
   float:left;
 }
-  /*centering the table inside the div.  Make the table fill the div and give it relative position.*/
-table{
-    width:98%;
-    height:100%;
-    position:relative;
-    }
-table, th, td {
-    padding:2px;
-    margin:3px;
-}
-input {
-  font-size; 20px;
+
+.button {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  padding:7px;
+  font-size: 20px;
+  border-radius:12px;
+  width: 60%; 
+  text-decoration:none;
 }

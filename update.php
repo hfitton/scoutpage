@@ -49,13 +49,13 @@ if (mysqli_num_rows($people) > 0) {
 
 while ($person = $people->fetch_assoc()) {
   ?>
-
-  <form>
-
   <div id='left'> 
-        <button class="button" type='submit' name='search' id='search' value='search' formaction = "admin.php" method='GET' >Back to search</button>
+  <div style="text-align:center" id='left1'>
 
-    
+      <button class="button" type='submit' name='search' id='search' value='search' formaction = "admin.php" method='GET' >Back to search</button>
+
+  </div>
+  
   <?php    
 
  /*'<input type="text" name="firstname" value="'. htmlentities($row->firstname) .'" maxlength="50" required="required" />';*/
@@ -111,14 +111,15 @@ while ($person = $people->fetch_assoc()) {
 
          </table>";
       ?>
-      </div> <!--closes left div -->  
-
+      </div>
       <div id='middle'>
-        
+        <div id='middle1'style="text-align:center">
+
           <form action="../home.html" method='GET'>
 
+
           <button class="button" type='submit' name='home' id='home' value='submit'>Home</button>
-        
+        </div>
       
       <?php
         echo"<table>
@@ -148,11 +149,12 @@ while ($person = $people->fetch_assoc()) {
 
          </table>";
            
-           ?></div>  <!--closes middle div -->
+           ?></div>
            <div id='right'>
+              <div id='right1' style="text-align:center">
                   <form action="update.php" method='post'>
-                  <button style="text-align:center" class="button" type='submit' name='save' id='save' value='save'>Save</button>
-          
+                  <button class="button" type='submit' name='save' id='save' value='save'>Save</button>
+              </div>
    <?php
            echo"<table>
 
@@ -183,8 +185,7 @@ while ($person = $people->fetch_assoc()) {
        };
      };
     ?>
-    </form>
-</div> <!-- closes the container div-->
+</div>
 <?php 
 
 /* this executes the code when the button is clicked. */
