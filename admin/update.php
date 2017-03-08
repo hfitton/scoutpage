@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 ?>
 <!DOCTYPE HTML>
@@ -12,25 +12,19 @@ session_start();
 <!--link to js script DON'T FORGET TO IMPORT LIBRARY!
 
    this page comes from 'details.php'-->
-	<script src="./jquery-3.1.0.js"></script>
-	<script type="text/javascript" src="home.js"></script>
-
-  <!--open header div-->
-
 <div class='keaheader'>
 	<a href="../home.html"><img src="../pictures/waikscoutbanner.png" alt = "Welcome to Waikanae Scout Group"></a>
 	
 </div>
 	
-	<div class="container"> <!--open container div to allow creation of grid below.-->
+<div class="container"> <!--open container div to allow creation of grid below.-->
 
     <?php
 require_once('config_sql.inc');
 
-/*
-*the id is stored in the session array, here called 'data.'
-*/
-$id = $_SESSION['data'];
+//var_dump ($_SESSION['data']);
+
+$id = $_SESSION['sqlid'];
 
 //pull everything from the db
 $sql = ("SELECT * FROM consentform  WHERE id LIKE {$id}");
@@ -40,21 +34,24 @@ $sql = ("SELECT * FROM consentform  WHERE id LIKE {$id}");
 $people = $conn->query($sql);
 
 if (mysqli_num_rows($people) > 0) {
-    //need to find the matching data.  
-    // output data of each row
-  //echo $people;
-    echo "<ul>\n";
-
+    //need to find the matching data. output data of each row
+ 
 //setup while loop. person equals select all from consentform and fetch assoc will find all the columns.  
 
 while ($person = $people->fetch_assoc()) {
   ?>
 
-  <form>
-
+  	<form action="update.php" method='post'>
   <div id='left'> 
-        <button class="button" type='submit' name='search' id='search' value='search' formaction = "admin.php" method='GET' >Back to search</button>
 
+  <div style="text-align:center" id='left1'>
+  <!-- terrible issues with buttons.  Found this solution at:
+  http://stackoverflow.com/questions/2906582/how-do-i-create-an-html-button-that-acts-like-a-link
+  -->
+
+  <button onclick="location.href='admin.php'" type="button" class= 'button' label= 'search'>Back to Search</label></button>
+
+      </div>
     
   <?php    
 
@@ -113,12 +110,12 @@ while ($person = $people->fetch_assoc()) {
       ?>
       </div> <!--closes left div -->  
 
+      </div>
       <div id='middle'>
-        
-          <form action="../home.html" method='GET'>
-
-          <button class="button" type='submit' name='home' id='home' value='submit'>Home</button>
-        
+      <div id='middle1'style="text-align:center">
+    <button onclick="location.href='../home.html'" type="button" class ="button" name ='home'>Home
+    </button>
+    </div>
       
       <?php
         echo"<table>
@@ -150,7 +147,6 @@ while ($person = $people->fetch_assoc()) {
            
            ?></div>  <!--closes middle div -->
            <div id='right'>
-                  <form action="update.php" method='post'>
                   <button style="text-align:center" class="button" type='submit' name='save' id='save' value='save'>Save</button>
           
    <?php

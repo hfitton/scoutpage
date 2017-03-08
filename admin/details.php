@@ -22,7 +22,6 @@ session_start();
 
     <?php
 require_once('config_sql.inc');
-
 /*
 *$_GET['id']
 In your sql, always refer to it as (int)$_GET['id']; So php converts it into an integer, and stops bad people doing things like:
@@ -30,40 +29,36 @@ http://localhost/details.php?id="delete * from user",
 As prepending (int) would convert that to 0
 you come to this page from the results page.  The id is the mysql id
 */
+$id = (int)$_GET['id'];	
 
-$id = (int)$_GET["id"];
 
-$_SESSION['data']=$id;
+
+//$_SESSION['data']=$id;
 
 //var_dump($_SESSION);
-
-
 //pull everything from the db
 $sql = ("SELECT * FROM consentform  WHERE id LIKE {$id}");
 //learned you need the {} around the variable name.   
-
 //run the query        
 $people = $conn->query($sql);
-
 if (mysqli_num_rows($people) > 0) {
     //need to find the matching data.  
     // output data of each row
   //echo $people;
     echo "<ul>\n";
-
 //setup while loop. person equals select all from consentform and fetch assoc will find all the columns.  
-
 while ($person = $people->fetch_assoc()) {
   ?>
   <div id='left'> 
   <div style="text-align:center" id='left1'>
-  <form action="admin.php" method='post'>
-    <button class="button" type='submit' name='submit' id='submit' value='submit'>Back to search</button>
-  </form>
+      <button onclick="location.href='admin.php'" type="button" class='button'>Back to search</button><br>
   </div>
   
-  <?php    
-        echo "<table>
+  <?php   
+        echo "
+	<form>
+	
+	<table>
         <th colspan ='2'>Member's Details</th>
         <tr><td>Name:  </td><td>".$person['firstname'] . " " . $person['surname']
          . "</td></tr><tr><td>Address:</td><td>" . $person['address'] . "</td></tr>
@@ -82,28 +77,28 @@ while ($person = $people->fetch_assoc()) {
          </table>";
       ?>
       </div>
-      <div id='middle'>
-      <div id='middle1'style="text-align:center">
-  <form action="../home.html" method='post'>
-    <button class="button" type='submit' name='submit' id='submit' value='submit'>Home</button>
-  </form>
-  </div>
+      	<div id='middle'>
+      		<div id='middle1'style="text-align:center">
+ 			 <button onclick="location.href='../home.html'" type="button" class='button'>Home</button><br>
+  		</div>
       
-      <?php
+<?php
         echo"<table>
-        <th colspan ='2'>Primary Contact 1</th>
-          <tr><td>Parent / Carer</td><td>".$person['p1firstname'] . " " . $person['p1surname']. "</td></tr>
-         <tr><td>Address:</td><td>" . $person['p1address'] . "</td></tr>
-         <tr><td>Phone</td><td>" . $person['p1homePhone']. "</td></tr>
-         <tr><td>Mobile No:</td><td>" . $person['p1mobile'] . "</td></tr>
-         <tr><td>Email:</td><td>" . $person['p1email'] . "</td></tr>
-         <tr><td>Relationship:</td><td>" . $person['p1relation'] . "</td></tr>
+        	<th colspan ='2'>Primary Contact 1</th>
+          		<tr><td>Parent / Carer</td><td>".$person['p1firstname'] . " " . $person['p1surname']. "</td></tr>
+         		<tr><td>Address:</td><td>" . $person['p1address'] . "</td></tr>
+         		<tr><td>Phone</td><td>" . $person['p1homePhone']. "</td></tr>
+			 <tr><td>Mobile No:</td><td>" . $person['p1mobile'] . "</td></tr>
+			 <tr><td>Email:</td><td>" . $person['p1email'] . "</td></tr>
+			 <tr><td>Relationship:</td><td>" . $person['p1relation'] . "</td></tr>
          </table>";
            
            ?></div>
            <div id='right'>
            <div id='right1' style="text-align:center">
-  <form action="update.php" method='post'>
+
+  <action="update.php?id=<?php echo (int)$_GET['id']; ?>" method='post'>
+	
     <button class="button" type='submit' name='submit' id='submit' value='submit'>Edit</button>
     </div>
   </form>
@@ -119,8 +114,6 @@ while ($person = $people->fetch_assoc()) {
          </table>";
        };
      };
-
-
     ?>
 </div>
 

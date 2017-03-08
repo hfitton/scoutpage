@@ -4,34 +4,27 @@
     <title>admin</title>
   </head>
   <body>
-  <link rel="stylesheet" href="admin.css">
-  <title>Admin</title>
-     </head>
-
-     <div class='keaheader'>
-  <a href="../home.html"><img src="../pictures/waikscoutbanner.png" alt = "Welcome to Waikanae Scout Group"></a><br>
+  	<link rel="stylesheet" href="admin.css">
+    
+<div class='keaheader'>
+  	<a href="../home.html"><img src="../pictures/waikscoutbanner.png" alt = "Welcome to Waikanae Scout Group"></a><br>
 </div>
 
 	<!--button to take you back to the homepage-->
 
-  <div id ="form">
+	<div id ="form"><form action="results.php" method="post" id='searchform'>
     
-	<form action="../home.html" method='post'>
-		<button class="button" type='submit' name='submit' id='submit' value='submit'>Home</button>
-	</form>
-
-   <form action="results.php" method="post" id='searchform'>
+		 <button onclick="location.href='../home.html'" type="button" class='button' label for='home'>Home</label></button><br>	
 
      <!-- Your name:<input type='text' name='name' label="name" id="name"></label><br> -->
       
-    Search for:<input type='text' required='required' placeholder= 'search here' name='test' label='test' id="test"></label><br>
-
-    
-       
-        <input type="submit" name='submit' value="Search" />
-
-      </form>
-      </div>
+    				<input type='text' required='required' placeholder= 'search here' name='search' id="search"><br>
+       <!--search will take you to the results.php page.-->
+        			<input type="submit" name='submit' value="search"/>
+			</form>
+	</div>
+  </body>
+</html>
 
 
 
