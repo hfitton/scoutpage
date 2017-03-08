@@ -47,12 +47,13 @@ select {
   padding:7px;
   font-size: 20px;
   border-radius:12px;
-  width: 50%;
-  
+  width: 50%;  
 }
+
+
 input {
 	margin:auto;
-  display:block;
+	  display:block;
   padding:7px;
   font-size: 20px;
   border-radius:12px;

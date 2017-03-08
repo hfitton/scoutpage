@@ -22,10 +22,10 @@ session_start();
     <?php
 require_once('config_sql.inc');
 
-//var_dump ($_SESSION['data']);
+//$id= $_POST['id'];
 
-$id = $_SESSION['sqlid'];
-
+$id = (int)$_GET['id'];	
+	
 //pull everything from the db
 $sql = ("SELECT * FROM consentform  WHERE id LIKE {$id}");
 //learned you need the {} around the variable name.   

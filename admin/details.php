@@ -31,51 +31,65 @@ you come to this page from the results page.  The id is the mysql id
 */
 $id = (int)$_GET['id'];	
 
-
-
-//$_SESSION['data']=$id;
-
-//var_dump($_SESSION);
 //pull everything from the db
 $sql = ("SELECT * FROM consentform  WHERE id LIKE {$id}");
 //learned you need the {} around the variable name.   
-//run the query        
+     
 $people = $conn->query($sql);
-if (mysqli_num_rows($people) > 0) {
-    //need to find the matching data.  
-    // output data of each row
-  //echo $people;
-    echo "<ul>\n";
+
+if (mysqli_num_rows($people) > 0) 	{
+    
+    					echo "<ul>\n";
 //setup while loop. person equals select all from consentform and fetch assoc will find all the columns.  
-while ($person = $people->fetch_assoc()) {
-  ?>
-  <div id='left'> 
-  <div style="text-align:center" id='left1'>
-      <button onclick="location.href='admin.php'" type="button" class='button'>Back to search</button><br>
-  </div>
+					while ($person = $people->fetch_assoc()) {
+?>
+  	<div id='left'> 
+  		<div style="text-align:center" id='left1'>
+      			<button onclick="location.href='admin.php'" type="button" class='button'>Back to search</button><br>
+  		</div>
   
-  <?php   
-        echo "
-	<form>
-	
-	<table>
-        <th colspan ='2'>Member's Details</th>
-        <tr><td>Name:  </td><td>".$person['firstname'] . " " . $person['surname']
-         . "</td></tr><tr><td>Address:</td><td>" . $person['address'] . "</td></tr>
-         <tr><td>Phone</td><td>" . $person['homePhone']. "</td></tr>
-         <tr><td>Mobile No:</td><td>" . $person['mobile'] . "</td></tr>
-         <tr><td>Email:</td><td>" . $person['email'] . "</td></tr>
-         <tr><td>Date of birth:</td><td>" . $person['dob'] . "</td></tr>
-         <tr><td>School yr:</td><td>" . $person['schoolyr'] . "</td></tr>
-         <tr><td>School:</td><td>" . $person['school'] . "</td></tr>
-         <tr><td>Ethnicity:</td><td>" . $person['ethnicity'] . "</td></tr>
-         <tr><td>Gender:</td><td>" . $person['gender'] . "</td></tr>
-         <tr><td>Medical notes:</td><td>" . $person['medical'] . "</td></tr>
-         <tr><td>Comments:</td><td>" . $person['comments'] . "</td></tr>
-         <tr><td>Medical:</td><td>".$person['medical'] . "</td></tr>
-         <tr><td>Diet:</td><td>" . $person['diet'] . "</td></tr>
-         </table>";
-      ?>
+ <?php   
+//the action (the target URL) of the form is set to point at the update.php page, and appending the ?id= section for passing it on
+			$id = $person['id'];    
+
+?>		<form action= "update.php" method="post" id ="$id">  <?php
+
+			echo "<table>
+
+			<th colspan ='2'>Member's Details</th>
+
+			<tr><td>Name:  </td><td>".$person['firstname']
+
+			 . " " . $person['surname']S . "</td></tr>
+
+			<tr><td>Address:</td><td>" . $person['address'] . "</td></tr>
+
+			 <tr><td>Phone</td><td>" . $person['homePhone']. "</td></tr>
+
+			 <tr><td>Mobile No:</td><td>" . $person['mobile'] . "</td></tr>
+
+			 <tr><td>Email:</td><td>" . $person['email'] . "</td></tr>
+
+			 <tr><td>Date of birth:</td><td>" . $person['dob'] . "</td></tr>
+
+			 <tr><td>School yr:</td><td>" . $person['schoolyr'] . "</td></tr>
+
+			 <tr><td>School:</td><td>" . $person['school'] . "</td></tr>
+
+			 <tr><td>Ethnicity:</td><td>" . $person['ethnicity'] . "</td></tr>
+
+			 <tr><td>Gender:</td><td>" . $person['gender'] . "</td></tr>
+
+			 <tr><td>Medical notes:</td><td>" . $person['medical'] . "</td></tr>
+
+			 <tr><td>Comments:</td><td>" . $person['comments'] . "</td></tr>
+
+			 <tr><td>Medical:</td><td>".$person['medical'] . "</td></tr>
+
+			 <tr><td>Diet:</td><td>" . $person['diet'] . "</td></tr>
+
+			 </table>";
+?>
       </div>
       	<div id='middle'>
       		<div id='middle1'style="text-align:center">
@@ -97,11 +111,10 @@ while ($person = $people->fetch_assoc()) {
            <div id='right'>
            <div id='right1' style="text-align:center">
 
-  <action="update.php?id=<?php echo (int)$_GET['id']; ?>" method='post'>
-	
+
     <button class="button" type='submit' name='submit' id='submit' value='submit'>Edit</button>
     </div>
-  </form>
+ 
            <?php
            echo "<table>
            <th colspan ='2'>Primary Contact 2</th>
@@ -111,10 +124,10 @@ while ($person = $people->fetch_assoc()) {
          <tr><td>Mobile No:</td><td>" . $person['p2mobile'] . "</td></tr>
          <tr><td>Email:</td><td>" . $person['p2email'] . "</td></tr>
          <tr><td>Relationship:</td><td>" . $person['p2relation'] ."</td></tr>
-         </table>";
+         </table>"; 
        };
      };
-    ?>
+    ?></form>
 </div>
 
 

@@ -2,6 +2,7 @@
 /* '#' is for an id  . for a class. */  
 body	{
 	font-family:Arial, Verdana, Garamond;
+  text-decoration: none;
   }
 
 .keaheader { 
@@ -32,7 +33,7 @@ body	{
   display: inline-block;
   float:left;
   width: 33%;
-  }
+    }
 #middle {
   margin: auto;
   width:33%;
