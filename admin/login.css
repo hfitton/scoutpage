@@ -1,0 +1,55 @@
+/* this goes with details.php */
+/* '#' is for an id  . for a class. */  
+body	{
+	font-family:Arial, Verdana, Garamond;
+  text-decoration: none;
+  }
+
+.keaheader { 
+  background-color:#5B3896; 
+  text-align:center;  
+  margin:auto; 
+  font-size:50px; 
+  color:#c1bb31; 
+  font-style:bold; 
+}
+
+.button {
+	margin:0;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  padding:7px;
+  font-size: 20px;
+  border-radius:12px;
+  width: 20%; 
+  text-decoration:none;
+}
+
+input[type=text] {
+	width:90%;
+	padding:7px;
+    	margin-top: 7px;
+margin-bottom:7px;
+	margin-left:auto;
+	margin-right:auto;
+    	box-sizing: border-box;
+    	border: 3px solid #ccc;
+}
+
+.container {  
+  margin:auto;  
+  width:100%}
+
+#left {
+  margin: auto;
+margin-left:20px;
+  display: inline-block;
+  float:left;
+  width: 48%;
+    }
+
+#right {
+  margin: auto;
+  width:45%;
+  float:left;
+}
