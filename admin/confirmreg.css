@@ -1,4 +1,4 @@
-/* this goes with details.php */
+/* this goes with confirmreg.php */
 /* '#' is for an id  . for a class. */  
 body	{
 	font-family:Arial, Verdana, Garamond;
@@ -13,9 +13,10 @@ body	{
   color:#c1bb31; 
   font-style:bold; 
 }
-#container 	{  
+.container 	{  
+		text-align:center;
 	  	margin:auto; 
-		width:40%
+		width:80%
 		}			
 
 .button {
@@ -28,20 +29,5 @@ body	{
 	clear:all;		
 	}
 
-input[type='text']	{
-	width:100%;
-	padding:7px;
-    	margin:10px 0px 10px 0px;
-    	box-sizing: border-box;
-    	border: 3px solid #5B3896;
-	}
-
-input[type='password']	{
-	width:100%;
-	padding:7px;
-    	margin:10px 0px 10px 0px;
-    	box-sizing: border-box;
-    	border: 3px solid #5B3896;
-	}
 
 

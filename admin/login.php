@@ -8,27 +8,24 @@
 		<div class='keaheader'>
   			<a href="../home.html"><img src="../pictures/waikscoutbanner.png" alt = "Welcome to Waikanae Scout Group"></a><br>
 		</div>
-		<div id='container'>
-			<div id ="left" >
-
-				<form action="admin.php" method="post" id='register'>    
-			 		<p>Please enter your details below to register.</p>
-
-					<label for='name'>Name:</label><br>
-		     			<input type='text' required='required' placeholder= 'name' name='name' id="name"><br>
+		<div id="container">
+			<p>Please enter your details below to login.</p>			
+				<form action="admin.php" method="post" id='register'>  			
 					<label for='username'>Username:</label><br>
-					<input type='text' required='required' placeholder= 'username' name='username' id="username"><br>
+		     			<input type='text' required='required' placeholder= 'Username' name='username' id="username"><br>
 					<label for='password'>Password:</label><br>
-					<input type='text' required='required' placeholder= 'password' name='password' id="password"><br>
-					<label for='confirmpassword'>Confirm Password:</label><br>
-					<input type='text' required='required' placeholder= 'confirm password' name='confirmpassword' 						id="confirmpassword"><br>
-						<div id='buttons' style="text-align:center">		       			
-							<button onclick="location.href='../home.html'" type="button" class='button' label 								for='home'>Home</label>
-							</button><br>	
-							<input type="submit" name='submit' class='button' value="Register">
-						</div>
+					<input type='password' required='required' placeholder= 'Password' name='password'id="password">
+				<div id='buttons' style='text-align:center'>	
+					<input type="submit" name='submit' class='button' value="Login">
+					<p style='text-align:left'>New users can register below:</p>				
+					<button onclick="location.href='register.html'" type="button" class='button'label for='register'>
+					Register</label></button> 							       						<button onclick="location.href='../home.html'" type="button" class='button' label for='home'>
+					Home</label></button>							
 				</form>
-			</div>
+				</div>
+		</div>		
+						
+			
   	</body>
 </html>
 

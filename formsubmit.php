@@ -91,7 +91,7 @@ $data = 'insert into consentform
 	p2other,
 	consent
       )
-      values
+      values	
       (
         "' . $_POST["surname"] . '",
         "' . $_POST["firstname"] . '",

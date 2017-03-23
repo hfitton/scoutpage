@@ -1,8 +1,8 @@
-/* this goes with update.php */
+/* this goes with details.php */
 /* '#' is for an id  . for a class. */  
-
-body  {
-  font-family:Arial, Verdana, Garamond;
+body	{
+	font-family:Arial, Verdana, Garamond;
+  text-decoration: none;
   }
 
 .keaheader { 
@@ -12,28 +12,6 @@ body  {
   font-size:50px; 
   color:#c1bb31; 
   font-style:bold; 
- 
-.container {  
-  margin:auto;  
-  width:100%
-  border:1px solid black;
-}
-
-#left {
-  margin: auto;
-  display: inline-block;
-  float:left;
-  width: 33%;
-  }
-#middle {
-  margin: auto;
-  width:33%;
-  float:left;
-  }
-#right {
-  margin: auto;
-  width:33%;
-  float:left;
 }
 
 .button {
@@ -44,4 +22,45 @@ body  {
   border-radius:12px;
   width: 60%; 
   text-decoration:none;
+  text-align:center;
+  display:inline-block;
+}
+
+.right1 {
+  text-align:center;
+  display:inline-block;
+}
+
+.container {  
+  margin:auto;  
+  width:100%}
+
+#left {
+  margin: auto;
+  display: inline-block;
+  float:left;
+  width: 33%;
+    }
+#middle {
+  margin: auto;
+  width:33%;
+  float:left;
+  }
+#right {
+  margin: auto;
+  width:33%;
+  float:left;
+}
+  /*centering the table inside the div.  Make the table fill the div and give it relative position.*/
+table{
+    width:98%;
+    height:100%;
+    position:relative;
+    }
+table, th, td {
+    /*border: 1px solid black;
+    /* border-collapse makes one single border around the table. 
+    border-collapse: collapse;*/
+    padding:2px;
+    margin:3px;
 }

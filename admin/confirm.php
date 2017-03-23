@@ -13,7 +13,7 @@
 	
 <?php
 
-if( isset( $_POST['save']) ) 
+if( isset( $_POST['register']) ) 
 {
 			require_once('config_sql.inc');	
 			$id = (int)$_GET['id']; 

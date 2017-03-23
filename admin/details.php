@@ -1,6 +1,7 @@
 <?php 
 session_start();
 ?>
+
 <!DOCTYPE HTML>
 <html>
   <head>
@@ -29,12 +30,19 @@ http://localhost/details.php?id="delete * from user",
 As prepending (int) would convert that to 0
 you come to this page from the results page.  The id is the mysql id
 */
+
 $id = (int)$_GET['id'];	
 
+//$_SESSION['id'] = $id;
+
 //pull everything from the db
-$sql = ("SELECT * FROM consentform  WHERE id LIKE {$id}");
+
+$sql = "SELECT * FROM consentform  WHERE id LIKE ".$id;
 //learned you need the {} around the variable name.   
      
+
+//the action (the target URL) of the form is set to point at the update.php page, and appending the ?id= section for passing it on
+			     
 $people = $conn->query($sql);
 
 if (mysqli_num_rows($people) > 0) 	{
@@ -52,7 +60,7 @@ if (mysqli_num_rows($people) > 0) 	{
 //the action (the target URL) of the form is set to point at the update.php page, and appending the ?id= section for passing it on
 			$id = $person['id'];    
 
-?>		<form action= "update.php" method="post" id ="$id">  <?php
+?>		<form action= "update.php?id=<?=$id;?>" method="post" id ="id" name=	"id">  <?php
 
 			echo "<table>
 
@@ -60,7 +68,7 @@ if (mysqli_num_rows($people) > 0) 	{
 
 			<tr><td>Name:  </td><td>".$person['firstname']
 
-			 . " " . $person['surname']S . "</td></tr>
+			 . " " . $person['surname'] . "</td></tr>
 
 			<tr><td>Address:</td><td>" . $person['address'] . "</td></tr>
 
@@ -109,11 +117,9 @@ if (mysqli_num_rows($people) > 0) 	{
            
            ?></div>
            <div id='right'>
-           <div id='right1' style="text-align:center">
-
-
-    <button class="button" type='submit' name='submit' id='submit' value='submit'>Edit</button>
-    </div>
+           	<div id='right1' style="text-align:center">
+    			<button class="button" type='submit' name='submit' id='submit' value='submit'>Edit</button>
+    	   	</div>
  
            <?php
            echo "<table>
@@ -128,7 +134,7 @@ if (mysqli_num_rows($people) > 0) 	{
        };
      };
     ?></form>
-</div>
+	</div>
 
 
   

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+    		<title>login</title>
+		<link rel="stylesheet" href="login.css">
+		<!--link to js script DON'T FORGET TO IMPORT LIBRARY!-->
+		<script src="./jquery-3.1.0.js"></script>
+		<script type="text/javascript" src="register.js"></script>
+  	</head>
+  	<body>    
+		<div class='keaheader'>
+  			<a href="../home.html"><img src="../pictures/waikscoutbanner.png" alt = "Welcome to Waikanae Scout Group"></a><br>
+		</div>
+		<div id='container'>
+			<p>Please enter your details below to register.</p>
+			
+				<form action="confirmreg.php" onsubmit=return'myfunction()' method="POST" id='register'>   
+
+					<form onSubmit="return validate();" ">
+					
+					<label for='name'>Full name:</label><br>
+		     			<input type='text' required='required' placeholder='name' 
+						maxlength="100" name='name' id="name"><br>
+					<label for='username'>Username:</label><br>
+					<input type='text' required='required' placeholder= 'username' name='username' id="username"><br>
+					<label for='password'>Password:</label><br>
+					<input type='password' required='required' placeholder= 'password' minlength="8" name='password' 						id="password"><br>
+					<label for='confirmpassword'>Confirm Password:</label><br>
+					<input type='password' required='required' placeholder= 'confirm password' minlength="8"  						name='confirmpassword' id="confirmpassword"><br>
+							
+						<div id='buttons' style='text-align:center'>	
+							<input type="submit" name='submit' class='button' value="Register">
+							<button onclick="location.href='login.php'" type="button" class='button' label 								for='back'>Back</label></button>
+						</div>
+				</form>
+		</div>
+	</body>
+</html>

@@ -38,7 +38,7 @@ if (mysqli_num_rows($people) > 0) {
 
 ?>
 <!-- don't know if this will work to send the data through-->
-<form action="details.php" method="post" id="$person['id']">
+<form action="details.php" method="post" id ='$id'>
 <?php
 
 //setup while loop. person equals select all from consentform and fetch assoc will find all the columns.    
@@ -51,6 +51,7 @@ while ($person = $people->fetch_assoc()) {
 		$person['address'] . "
 	</li>\n";
 
+$id = $person['id'];
 
    /*
 
